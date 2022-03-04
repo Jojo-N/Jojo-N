@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Product page</title>
+    <!-- Import Styles -->
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <!-- Import Vue.js -->
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="nav-bar">
+
+        <ul>
+          <li>Product one</li>
+          <li>Product two</li>
+          <li>Product three</li>
+        </ul>
+      </div>
+     
+      <div class="cart">Cart({{cart.length}})</div>
+      <product-display :premium='premium' @add-to-cart="updateCart"@remove-from-cart="removeById"></product-display>
+      
+    </div>
+   
+    <!-- mountapp Js -->
+    <script src="./main.js"></script>
+    <script src="./components/productDisplay.js"></script>
+    <script src="./components/productDetails.js"></script>
+    <script src="./components/ReviewForm.js"></script>
+    <script src="./components/reviewList.js"></script>
+    <script>
+      const mountedApp = app.mount('#app')
+
+    </script>
+  </body>
+</html>
